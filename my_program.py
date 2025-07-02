@@ -1,7 +1,11 @@
-num = int(input())
-last_digit = num % 10
-first_digit = num // 10
-slf_d = first_digit + last_digit
-print("Число десятков -", first_digit)
-print("Число единиц -", last_digit)
-print("Сумма первого и последнего числа =", slf_d)
+n = int(input())
+a = n // 100
+b = (n % 100) // 10
+c = n % 10
+xmax = max(a, b, c)
+xmin = min(a, b, c)
+xavg = (a + b + c) - (xmax + xmin)
+if xmax - xmin == xavg:
+    print("Число интересное")
+else:
+    print("Число неинтересное")
